@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "no3sys"
+version = "1.0.0"
+description = "NO3SYS: Recursive Geometric Intelligence Architecture — Sacred Geometry-Based Cognitive System with Forked Reasoning, Affective Foresight, and Self-Evolving Metaprogramming"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Or4cl3 AI Solutions", email = "or4cl3aisolutions@gmail.com"},
+]
+keywords = [
+  "artificial-intelligence", "cognitive-architecture", "geometric-intelligence",
+  "multi-agent", "ethical-ai", "fork-based-reasoning", "self-evolving"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov"]
+full = [
+  "numpy>=1.24.0",
+  "psycopg2-binary>=2.9",
+  "neo4j>=5.0",
+  "redis>=4.0",
+  "faiss-cpu>=1.7",
+  "openai>=1.0",
+  "anthropic>=0.20",
+]
+
+[project.urls]
+Homepage = "https://github.com/or4cl3-ai-1/NO3SYS"
+Repository = "https://github.com/or4cl3-ai-1/NO3SYS"
+Issues = "https://github.com/or4cl3-ai-1/NO3SYS/issues"
+
+[tool.setuptools.packages.find]
+include = ["no3sys*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
